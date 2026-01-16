@@ -108,8 +108,3 @@
 .sidebar__copyright > span {
   color: #2c98f0;
 }
-@media screen and (min-width: 992px) {
-  .sidebar__content {
-    left: 0;
-  }
-}
