@@ -28,3 +28,8 @@ li {
   /* no bullet and numbering arises */
   all: unset;
 }
+@media screen and (min-width: 992px) {
+  #main-content {
+    margin-left: 300px;
+  }
+}
