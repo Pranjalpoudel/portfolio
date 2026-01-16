@@ -22,208 +22,232 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
- <link rel="stylesheet" href="css/skills.css" />
-   <link rel="stylesheet" href="globals.css">
-   <link rel="stylesheet" href="css/hero.css" />
-   <link rel="stylesheet" href="css/about.css" />
-   <link rel="stylesheet" href="css/common.css">
-   <link rel="stylesheet" href="css/work-count.css">
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/work-count.css" />
+
+    <!-- added styles to control sidebar/hamburger visibility and content shift -->
+  </head>
   <body>
-    <nav class="sidebar">
-  <i id="hamburger" class="fa-solid fa-bars sidebar__hamburger"></i>
+    <nav class="sidebar" aria-hidden="false">
+      <i
+        id="hamburger"
+        class="fa-solid fa-bars sidebar__hamburger"
+        aria-label="Toggle menu"
+      ></i>
 
-  <div class="sidebar__content">
-    <img class="sidebar__image" src="images/profile.png" alt="Profile Image" />
-    <h1 class="sidebar__name">Pranjal Poudel</h1>
-    <h2 class="sidebar__job">student <span>in Nepal</span></h2>
+      <div class="sidebar__content">
+        <img
+          class="sidebar__image"
+          src="../images/pic.jpg"
+          alt="Profile Image"
+        />
+        <h1 class="sidebar__name">Pranjal Poudel</h1>
+        <h2 class="sidebar__job">student <span>in Nepal</span></h2>
 
-    <ul class="sidebar__list">
-      <li class="sidebar__list__item">
-        <a href="#hero">home</a>
-      </li>
-      <li class="sidebar__list__item">
-        <a href="#about">about</a>
-      </li>
-      <li class="sidebar__list__item">
-        <a href="#skills">skills</a>
-      </li>
-      <li class="sidebar__list__item">
-        <a href="#contact">contact</a>
-      </li>
-    </ul>
+        <ul class="sidebar__list">
+          <li class="sidebar__list__item">
+            <a href="#hero">home</a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#about">about</a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#skills">skills</a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
 
-    <p class="sidebar__copyright">
-      &copy; 2026 All rights reserved | Made with &#128150; by
-      <span>PRANJAL</span>
-    </p>
-  </div>
-</nav>
-    <section id="hero">
-      <h1>
-        Hi! <br />
-        I am pranjal <br />I am a developer
-      </h1>
-      
-      <p>Electronic, Communication & Information engineer</p>
-      <button class="hero__btn">contact me <i class="fa-solid fa-envelope"></i></button>
-    </section>
-    <section id="about" class="section">
-  <span class="section__title">Hi There I am pranjal poudel .Currently a student of Electronic Communication and Information engineering running 5th semester</span>
-  <h2 class="section__subtitle">who am i?</h2>
-
-  <p class="about__description">
-    <strong>Hi! I am PRANJAL POUDEL</strong>
-   
-
-  <div class="about__skills">
-    <div class="about__box">
-      <i class="fa-solid fa-ear-listen"></i>
-      <h3>Graphic design</h3>
-    </div>
-    <div class="about__box">
-      <i class="fa-solid fa-globe"></i>
-      <h3>web design</h3>
-    </div>
-    <div class="about__box">
-      <i class="fa-solid fa-database"></i>
-      <h3>Software</h3>
-    </div>
-    <div class="about__box">
-      <i class="fa-solid fa-mobile"></i>
-      <h3>application</h3>
-    </div>
-  </div>
-
-  <div class="about__happy">
-    <h2>I am happy to know you that 300+ projects done successfully!</h2>
-    <button>hire me</button>
-  </div>
-</section>
-<section id="skills" class="section">
-  <span class="section__title">my speciality</span>
-  <span class="section__subtitle">my skills</span>
-
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maiores
-    ducimus id consequatur? Natus obcaecati.
-  </p>
-
-  <div class="skill__box">
-    <div class="skill">
-      <span>Photoshop</span>
-      <div class="skill__percent__box">
-        <div class="skill__percent">
-          <span>75%</span>
-        </div>
+        <p class="sidebar__copyright">
+          &copy; 2026 All rights reserved | Made with &#128150; by
+          <span>PRANJAL</span>
+        </p>
       </div>
-    </div>
+    </nav>
 
-    <div class="skill">
-      <span>React Js</span>
-      <div class="skill__percent__box">
-        <div
-          class="skill__percent"
-          style="width: 60%; background: #ec5453; color: #ec5453"
+    <!-- wrap the rest of the page so we can shift it when sidebar opens -->
+    <main class="content">
+      <section id="hero">
+        <h1>
+          Hi! <br />
+          I am pranjal <br />I am a developer
+        </h1>
+
+        <p>Electronic, Communication & Information engineer</p>
+        <button class="hero__btn">
+          contact me <i class="fa-solid fa-envelope"></i>
+        </button>
+      </section>
+
+      <section id="about" class="section">
+        <span class="section__title"
+          >Hi There I am pranjal poudel .Currently a student of Electronic
+          Communication and Information engineering running 5th semester</span
         >
-          <span>60%</span>
-        </div>
-      </div>
-    </div>
+        <h2 class="section__subtitle">who am i?</h2>
 
-    <div class="skill">
-      <span>HTML5</span>
-      <div class="skill__percent__box">
-        <div
-          class="skill__percent"
-          style="width: 85%; background: #f9bf3f; color: #f9bf3f"
+        <p class="about__description">
+          <strong>Hi! I am PRANJAL POUDEL</strong>
+        </p>
+
+        <div class="about__skills">
+          <div class="about__box">
+            <i class="fa-solid fa-ear-listen"></i>
+            <h3>Graphic design</h3>
+          </div>
+          <div class="about__box">
+            <i class="fa-solid fa-globe"></i>
+            <h3>web design</h3>
+          </div>
+          <div class="about__box">
+            <i class="fa-solid fa-database"></i>
+            <h3>Software</h3>
+          </div>
+          <div class="about__box">
+            <i class="fa-solid fa-mobile"></i>
+            <h3>application</h3>
+          </div>
+        </div>
+
+        <div class="about__happy">
+          <h2>I am happy to know you that 20+ projects done successfully!</h2>
+          <button style="cursor: pointer">hire me</button>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <span class="section__title">my speciality</span>
+        <span class="section__subtitle">my skills</span>
+
+        <p>
+          Here are some of my skills that I have acquired through my studies and
+          projects.
+        </p>
+
+        <div class="skill__box">
+          <div class="skill">
+            <span>Photoshop</span>
+            <div class="skill__percent__box">
+              <div class="skill__percent">
+                <span>75%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>React Js</span>
+            <div class="skill__percent__box">
+              <div
+                class="skill__percent"
+                style="width: 20%; background: #ec5453; color: #ec5453"
+              >
+                <span>20%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>HTML5</span>
+            <div class="skill__percent__box">
+              <div
+                class="skill__percent"
+                style="width: 85%; background: #f9bf3f; color: #f9bf3f"
+              >
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>CSS3</span>
+            <div class="skill__percent__box">
+              <div
+                class="skill__percent"
+                style="width: 90%; background: #a84cb8; color: #a84cb8"
+              >
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>C</span>
+            <div class="skill__percent__box">
+              <div
+                class="skill__percent"
+                style="width: 70%; background: #2fa499; color: #2fa499"
+              >
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>C++</span>
+            <div class="skill__percent__box">
+              <div
+                class="skill__percent"
+                style="width: 80%; background: #4054b2; color: #4054b2"
+              >
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work__count">
+        <span>309</span>
+        <span>cups of coffee</span>
+        <span>20</span>
+        <span>projects</span>
+        <span>30</span>
+        <span>clients</span>
+        <span>4</span>
+        <span>partners</span>
+      </section>
+
+      <section id="contact" class="section">
+        <span class="section__title">get in touch</span>
+        <h2 class="section__subtitle">contact</h2>
+
+        <form
+          action=""
+          id="contactForm"
+          class="contact__form"
+          onsubmit="submitForm(event);"
         >
-          <span>85%</span>
-        </div>
-      </div>
-    </div>
+          <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            name="name"
+            class="contact__input"
+          />
+          <textarea
+            id="message"
+            class="contact__textarea"
+            name="message"
+            placeholder="Message"
+            rows="4"
+          ></textarea>
+          <button class="contact__button" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
 
-    <div class="skill">
-      <span>CSS3</span>
-      <div class="skill__percent__box">
-        <div
-          class="skill__percent"
-          style="width: 90%; background: #a84cb8; color: #a84cb8"
-        >
-          <span>90%</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <span>Wordpress</span>
-      <div class="skill__percent__box">
-        <div
-          class="skill__percent"
-          style="width: 70%; background: #2fa499; color: #2fa499"
-        >
-          <span>70%</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <span>SEO</span>
-      <div class="skill__percent__box">
-        <div
-          class="skill__percent"
-          style="width: 80%; background: #4054b2; color: #4054b2"
-        >
-          <span>80%</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="work__count">
-  <span>309</span>
-  <span>cups of coffee</span>
-  <span>356</span>
-  <span>projects</span>
-  <span>30</span>
-  <span>clients</span>
-  <span>10</span>
-  <span>partners</span>
-</section>
-<section id="contact" class="section">
-  <span class="section__title">get in touch</span>
-  <h2 class="section__subtitle">contact</h2>
-
-  <form
-    action=""
-    id="contactForm"
-    class="contact__form"
-    onsubmit="submitForm(event);"
-  >
-    <input
-      type="text"
-      placeholder="Name"
-      id="name"
-      name="name"
-      class="contact__input"
-    />
-    <textarea
-      id="message"
-      class="contact__textarea"
-      name="message"
-      placeholder="Message"
-      rows="4"
-    ></textarea>
-    <button class="contact__button" type="submit">Send Message</button>
-  </form>
-</section>
-<script>
-  const hamburger = document.querySelector("#hamburger");
-  hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("sidebar__hamburger__translate");
-  });
-  
-</script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("sidebar__hamburger__translate");
+      });
+    </script>
   </body>
 </html>
