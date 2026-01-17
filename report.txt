@@ -4,7 +4,11 @@ Objectives
 • To create mobile first, responsive Portfolio website.
 
 Discussion:
-In this project, I designed and developed a mobile-first, responsive portfolio website using HTML and CSS. I created all required sections such as sidebar navigation, hero, about, skills, work count, and contact sections, and ensured the layout adapts well to different screen sizes.I deployed the website using GitHub Pages. The main challenges I faced were managing responsive layouts and fixing alignment issues across devices, as well as understanding Git commands for pushing code. I solved these problems by using CSS media queries, Flexbox, and by practicing basic Git commands through trial and error.
+In this project, I designed and developed a mobile-first, responsive portfolio website using HTML and CSS.
+ I created all required sections such as sidebar navigation, hero, about, skills, work count, and contact sections, and ensured the layout adapts well to different screen sizes.I deployed the website using GitHub Pages. 
+ The main challenges I faced were managing responsive layouts and fixing alignment issues across devices, as well as understanding Git commands for pushing code.
+  I solved these problems by using CSS media queries, Flexbox, and by practicing basic Git commands through trial and error.
 
 Conclusion:
-This project helped me understand how to build a complete responsive portfolio website using HTML and CSS and how to deploy it online using GitHub Pages. I learned the basics of version control with Git, improved my layout and responsiveness skills, and gained confidence in publishing my own work online.
+This project helped me understand how to build a complete responsive portfolio website using HTML and CSS and how to deploy it online using GitHub Pages.
+ I learned the basics of version control with Git, improved my layout and responsiveness skills, and gained confidence in publishing my own work online.
