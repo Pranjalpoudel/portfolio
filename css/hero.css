@@ -40,3 +40,19 @@
   cursor: pointer;
   background-color: transparent;
 }
+
+.resume-btn {
+  width: 300px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 2px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #2c98f0;
+  color: white;
+  margin-top: 10px;
+}

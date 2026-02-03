@@ -1,0 +1,35 @@
+.education-item {
+  background: #f2f3f7;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #2c98f0;
+}
+
+.education-item h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.education-item h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #2c98f0;
+}
+
+.education-details {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.education-description {
+  font-family: "Quicksand", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}

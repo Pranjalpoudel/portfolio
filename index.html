@@ -45,10 +45,37 @@
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/work-count.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/education.css" />
+    <link rel="stylesheet" href="css/hobbies.css" />
+    <link rel="stylesheet" href="css/contact-enhanced.css" />
 
     <!-- added styles to control sidebar/hamburger visibility and content shift -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
   </head>
   <body>
+    <script>
+      // Add fade-in animation to sections when they come into view
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        sections.forEach(section => {
+          section.style.opacity = '0';
+          section.style.transform = 'translateY(20px)';
+          section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          observer.observe(section);
+        });
+      });
+    </script>
     <nav class="sidebar" aria-hidden="false">
       <i
         id="hamburger"
@@ -59,11 +86,11 @@
       <div class="sidebar__content">
         <img
           class="sidebar__image"
-          src="../images/p1.jpg"
+          src="./images/p1.jpg"
           alt="Profile Image"
         />
 
-        <link rel="stylesheet" href="https://pranjalpoudel.com.np" />
+        
         <h1 class="sidebar__name">Pranjal Poudel</h1>
         <h2 class="sidebar__job">student <span>in Nepal</span></h2>
 
@@ -75,12 +102,26 @@
             <a href="#about">about</a>
           </li>
           <li class="sidebar__list__item">
+            <a href="#education">education</a>
+          </li>
+          <li class="sidebar__list__item">
             <a href="#skills">skills</a>
+          </li>
+          <li class="sidebar__list__item">
+            <a href="#projects">projects</a>
           </li>
           <li class="sidebar__list__item">
             <a href="#contact">contact</a>
           </li>
         </ul>
+
+        <div class="social-links">
+          <a href="https://github.com/Pranjalpoudel" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/pranjal-poudel-81539b2a4" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/PranjalPoudel22" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/pranjal.92" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/pranjal.poudel.320830" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
 
         <p class="sidebar__copyright">
           &copy; 2026 All rights reserved | Made with &#128150; by
@@ -106,41 +147,93 @@
         <a href="https://www.pranjalpoudel.com.np" target="_blank">
           <button>Visit PORTFOLIO</button>
         </a>
+        <a href="#" onclick="alert('Resume download functionality will be added soon!')">
+          <button class="resume-btn">Download Resume</button>
+        </a>
       </section>
 
       <section id="about" class="section">
-        <span class="section__title"
-          >Hi There I am pranjal poudel .Currently a student of Electronic
-          Communication and Information engineering running 5th semester</span
-        >
-        <h2 class="section__subtitle">who am i?</h2>
+        <span class="section__title">Electronic Communication & Information Engineering Student with passion for bridging hardware and software solutions</span>
+        <h2 class="section__subtitle">about me</h2>
 
         <p class="about__description">
-          <strong>Hi! I am PRANJAL POUDEL</strong>
+          <strong>Hi! I'm Pranjal Poudel</strong>
         </p>
 
         <div class="about__skills">
           <div class="about__box">
-            <i class="fa-solid fa-ear-listen"></i>
-            <h3>Graphic design</h3>
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Embedded Systems</h3>
           </div>
           <div class="about__box">
-            <i class="fa-solid fa-globe"></i>
-            <h3>web design</h3>
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
           </div>
           <div class="about__box">
-            <i class="fa-solid fa-database"></i>
-            <h3>Software</h3>
+            <i class="fa-solid fa-wrench"></i>
+            <h3>Problem Solving</h3>
           </div>
           <div class="about__box">
-            <i class="fa-solid fa-mobile"></i>
-            <h3>application</h3>
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Innovation</h3>
           </div>
         </div>
 
         <div class="about__happy">
-          <h2>I am happy to know you that 20+ projects done successfully!</h2>
-          <button style="cursor: pointer">hire me</button>
+          <h2>Passionate about creating solutions that blend technology with real-world applications</h2>
+          <button style="cursor: pointer">collaborate</button>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <span class="section__title">my educational journey</span>
+        <h2 class="section__subtitle">education</h2>
+
+        <div class="education-item">
+          <h3>Electronics, Communication & Information Engineering</h3>
+          <h4>National College of Engineering</h4>
+          <p class="education-details">Full Scholarship Recipient | Current GPA: 3.71</p>
+          <p class="education-description">Specializing in advanced electronics, signal processing, and embedded systems. Focusing on interdisciplinary projects that merge hardware and software solutions.</p>
+        </div>
+
+        <div class="education-item">
+          <h3>Higher Secondary Education</h3>
+          <h4>Kathmandu Model Secondary School, Baghbazar</h4>
+          <p class="education-details">Science Stream (Physics & Mathematics) | GPA: 3.82</p>
+          <p class="education-description">Built strong fundamentals in core sciences and mathematics. Participated in science fairs and developed interest in engineering applications.</p>
+        </div>
+
+        <div class="education-item">
+          <h3>Secondary Education</h3>
+          <h4>HEMS School</h4>
+          <p class="education-details">GPA: 4.0 | Distinction Achieved</p>
+          <p class="education-description">Completed secondary education with top honors. Developed analytical thinking and problem-solving skills foundational to engineering studies.</p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <span class="section__title">featured projects</span>
+        <h2 class="section__subtitle">my work</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-icon">🔌</div>
+            <h3>Embedded Systems</h3>
+            <p>Microcontroller projects, sensor networks, automation systems</p>
+            <a href="https://github.com/Pranjalpoudel/Projects" target="_blank" class="project-link">View Projects</a>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>Web Applications</h3>
+            <p>Responsive websites and interactive web solutions</p>
+            <a href="https://github.com/Pranjalpoudel/Projects" target="_blank" class="project-link">View Projects</a>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">💻</div>
+            <h3>Software Development</h3>
+            <p>Problem-solving algorithms and application development</p>
+            <a href="https://github.com/Pranjalpoudel/Projects" target="_blank" class="project-link">View Projects</a>
+          </div>
         </div>
       </section>
 
@@ -155,22 +248,10 @@
 
         <div class="skill__box">
           <div class="skill">
-            <span>Photoshop</span>
+            <span>Python</span>
             <div class="skill__percent__box">
-              <div class="skill__percent">
+              <div class="skill__percent" style="width: 75%; background: #3776ab; color: #3776ab">
                 <span>75%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <span>React Js</span>
-            <div class="skill__percent__box">
-              <div
-                class="skill__percent"
-                style="width: 20%; background: #ec5453; color: #ec5453"
-              >
-                <span>20%</span>
               </div>
             </div>
           </div>
@@ -178,11 +259,8 @@
           <div class="skill">
             <span>HTML5</span>
             <div class="skill__percent__box">
-              <div
-                class="skill__percent"
-                style="width: 85%; background: #f9bf3f; color: #f9bf3f"
-              >
-                <span>85%</span>
+              <div class="skill__percent" style="width: 90%; background: #f16529; color: #f16529">
+                <span>90%</span>
               </div>
             </div>
           </div>
@@ -190,11 +268,8 @@
           <div class="skill">
             <span>CSS3</span>
             <div class="skill__percent__box">
-              <div
-                class="skill__percent"
-                style="width: 90%; background: #a84cb8; color: #a84cb8"
-              >
-                <span>90%</span>
+              <div class="skill__percent" style="width: 85%; background: #264de4; color: #264de4">
+                <span>85%</span>
               </div>
             </div>
           </div>
@@ -202,11 +277,8 @@
           <div class="skill">
             <span>C</span>
             <div class="skill__percent__box">
-              <div
-                class="skill__percent"
-                style="width: 70%; background: #2fa499; color: #2fa499"
-              >
-                <span>70%</span>
+              <div class="skill__percent" style="width: 80%; background: #a8b9cc; color: #a8b9cc">
+                <span>80%</span>
               </div>
             </div>
           </div>
@@ -214,11 +286,53 @@
           <div class="skill">
             <span>C++</span>
             <div class="skill__percent__box">
-              <div
-                class="skill__percent"
-                style="width: 80%; background: #4054b2; color: #4054b2"
-              >
-                <span>80%</span>
+              <div class="skill__percent" style="width: 75%; background: #00599c; color: #00599c">
+                <span>75%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="skill__percent__box">
+              <div class="skill__percent" style="width: 70%; background: #f7df1e; color: #f7df1e">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>React</span>
+            <div class="skill__percent__box">
+              <div class="skill__percent" style="width: 60%; background: #61dafb; color: #61dafb">
+                <span>60%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Embedded Systems</span>
+            <div class="skill__percent__box">
+              <div class="skill__percent" style="width: 70%; background: #00aced; color: #00aced">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>IoT</span>
+            <div class="skill__percent__box">
+              <div class="skill__percent" style="width: 65%; background: #00c3ff; color: #00c3ff">
+                <span>65%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>PCB Design</span>
+            <div class="skill__percent__box">
+              <div class="skill__percent" style="width: 60%; background: #66fcf1; color: #66fcf1">
+                <span>60%</span>
               </div>
             </div>
           </div>
@@ -236,32 +350,96 @@
         <span>partners</span>
       </section>
 
+      <section id="hobbies" class="section">
+        <span class="section__title">personal interests</span>
+        <h2 class="section__subtitle">hobbies & interests</h2>
+
+        <div class="hobbies-container">
+          <div class="hobby-item">
+            <div class="hobby-icon">🎬</div>
+            <h3>Cinema</h3>
+            <p>Appreciating cinematic arts and storytelling techniques. I enjoy exploring diverse genres and analyzing film composition.</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon">⚽</div>
+            <h3>Sports</h3>
+            <p>Active participant in football and other sports. I value the discipline, teamwork, and strategic thinking sports teach us.</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon">🍳</div>
+            <h3>Culinary Arts</h3>
+            <p>Exploring culinary science through traditional and fusion recipes. Love experimenting with flavors and cooking techniques.</p>
+          </div>
+          <div class="hobby-item">
+            <div class="hobby-icon">🎨</div>
+            <h3>Visual Arts</h3>
+            <p>Expressing creativity through various art forms. Painting helps balance my analytical engineering mindset.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section">
         <span class="section__title">get in touch</span>
         <h2 class="section__subtitle">contact</h2>
 
-        <form
-          action=""
-          id="contactForm"
-          class="contact__form"
-          onsubmit="submitForm(event);"
-        >
-          <input
-            type="text"
-            placeholder="Name"
-            id="name"
-            name="name"
-            class="contact__input"
-          />
-          <textarea
-            id="message"
-            class="contact__textarea"
-            name="message"
-            placeholder="Message"
-            rows="4"
-          ></textarea>
-          <button class="contact__button" type="submit">Send Message</button>
-        </form>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Based In</h3>
+                <p>Kathmandu, Nepal</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email Me</h3>
+                <p>pranjalpaudel62@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Call Me</h3>
+                <p>+977 9767489841</p>
+              </div>
+            </div>
+          </div>
+
+          <form
+            action=""
+            id="contactForm"
+            class="contact__form"
+            onsubmit="submitForm(event);"
+          >
+            <input
+              type="text"
+              placeholder="Name"
+              id="name"
+              name="name"
+              class="contact__input"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              class="contact__input"
+              required
+            />
+            <textarea
+              id="message"
+              class="contact__textarea"
+              name="message"
+              placeholder="Message"
+              rows="4"
+              required
+            ></textarea>
+            <button class="contact__button" type="submit">Send Message</button>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -270,6 +448,66 @@
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("sidebar__hamburger__translate");
       });
+      
+      // Form submission handler
+      async function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        };
+        
+        // Basic validation
+        if (!formData.name || !formData.email || !formData.message) {
+          alert('Please fill in all fields.');
+          return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[\w\.-]+@[\w\.-]+\.\w+$/;
+        if (!emailRegex.test(formData.email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        
+        // Show loading state
+        const submitBtn = document.querySelector('.contact__button');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+          // Using EmailJS to send the form data
+          // You'll need to set up an EmailJS account and configure this
+          /*
+          const response = await emailjs.send(
+            'YOUR_SERVICE_ID',
+            'YOUR_TEMPLATE_ID', 
+            {
+              from_name: formData.name,
+              from_email: formData.email,
+              message: formData.message
+            }
+          );
+          */
+          
+          // For now, show a success message
+          setTimeout(() => {
+            alert('Thank you for your message! I will get back to you soon.');
+            document.getElementById('contactForm').reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }, 1000);
+          
+        } catch (error) {
+          console.error('Error sending message:', error);
+          alert('There was an error sending your message. Please try again later.');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      }
     </script>
   </body>
 </html>
